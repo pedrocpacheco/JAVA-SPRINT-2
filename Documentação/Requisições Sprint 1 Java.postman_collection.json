@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1d32d23d-d9c0-465c-b13d-8646d4bc6d66",
+		"_postman_id": "b78d8063-bd52-4950-85db-474712de56ed",
 		"name": "Requisições Sprint 1 Java",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "33405591"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26666525"
 	},
 	"item": [
 		{
@@ -36,19 +36,7 @@
 								"value": "insomnia/8.6.1"
 							}
 						],
-						"url": {
-							"raw": "http://localhost:8088/anallyzer/campanha/24",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8088",
-							"path": [
-								"anallyzer",
-								"campanha",
-								"24"
-							]
-						}
+						"url": "http://localhost:8088/anallyzer/campanha/24"
 					},
 					"response": []
 				},
@@ -92,19 +80,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8088/anallyzer/campanha/25",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8088",
-							"path": [
-								"anallyzer",
-								"campanha",
-								"25"
-							]
-						}
+						"url": "http://localhost:8088/anallyzer/campanha/25"
 					},
 					"response": []
 				},
@@ -135,19 +111,7 @@
 								"value": "insomnia/8.6.1"
 							}
 						],
-						"url": {
-							"raw": "http://localhost:8088/anallyzer/campanha/25",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8088",
-							"path": [
-								"anallyzer",
-								"campanha",
-								"25"
-							]
-						}
+						"url": "http://localhost:8088/anallyzer/campanha/25"
 					},
 					"response": []
 				},
@@ -191,18 +155,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8088/anallyzer/campanha",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8088",
-							"path": [
-								"anallyzer",
-								"campanha"
-							]
-						}
+						"url": "http://localhost:8088/anallyzer/campanha"
 					},
 					"response": []
 				}
@@ -238,19 +191,7 @@
 								"value": "insomnia/8.6.1"
 							}
 						],
-						"url": {
-							"raw": "http://localhost:8088/anallyzer/empresas/10",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8088",
-							"path": [
-								"anallyzer",
-								"empresas",
-								"10"
-							]
-						}
+						"url": "http://localhost:8088/anallyzer/empresas/10"
 					},
 					"response": []
 				},
@@ -291,18 +232,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8089/anallyzer/empresas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8089",
-							"path": [
-								"anallyzer",
-								"empresas"
-							]
-						}
+						"url": "http://localhost:8089/anallyzer/empresas"
 					},
 					"response": []
 				}
@@ -338,19 +268,7 @@
 								"value": "insomnia/8.6.1"
 							}
 						],
-						"url": {
-							"raw": "http://localhost:8088/anallyzer/clientes/8",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8088",
-							"path": [
-								"anallyzer",
-								"clientes",
-								"8"
-							]
-						}
+						"url": "http://localhost:8088/anallyzer/clientes/8"
 					},
 					"response": []
 				},
@@ -394,18 +312,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8088/anallyzer/clientes",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8088",
-							"path": [
-								"anallyzer",
-								"clientes"
-							]
-						}
+						"url": "http://localhost:8088/anallyzer/clientes"
 					},
 					"response": []
 				}
