@@ -33,10 +33,10 @@ Bem-vindo ao repositório do Anallyzer, um projeto focado em análise de e-mail 
     </td>
     <td align="center">
       <p>Java</p>
-      <a href="https://github.com/k-alm">
-        <img src="https://avatars.githubusercontent.com/u/126576641?v=4" width="115px;" alt="Foto do Kauan no github"/><br>
+      <a href="https://github.com/pedrocpacheco">
+        <img src="https://avatars.githubusercontent.com/u/112909829?v=4" width="115px;" alt="Foto do Pedro no github"/><br>
         <sub>
-          <strong>Kauan de Almeida</strong>
+          <strong>Pedro</strong>
         </sub>
       </a>
     </td>
@@ -67,16 +67,108 @@ $ git clone https://github.com/k-alm/Challenge-Java
 ## 🔗 Link do pitch:
 - https://youtu.be/73gU17oIHiY
 
-## 🛑 Listagem dos endpoints: 
-Lembrando que a rota padrão começa com <b>"/anallyzer"</b>
-
-| Endpoints         | Método | Ação                                                    |
-|-------------------|--------|---------------------------------------------------------|
-| /campanha{id}     | GET    | Retorna a campanha selecionada pelo o {id}              |
-| /clientes/{id}    | GET    | Retorna o cliente selecionado pelo o id {id}            |
-| /empresas/{id}    | GET    | Retorna a empresa selecionada pelo o {id}               |
-| /campanha         | POST   | Cria uma nova campanha                                  |
-| /clientes         | POST   | Cria um novo cliente                                    |
-| /empresas         | POST   | Cria uma nova empresa                                   |
-| /campanha/{id}    | PATCH  | Altera nome e descrição da campanha                     |
-| /campanha/{id}    | DELETE | Deleta uma campanha                                     |
+## Documentação da API
+### Entidade Empresa
+#### Endpoint: Criar Empresa
+- Método: POST
+- Rota: /empresas
+- Descrição: Cria uma nova empresa.
+- Corpo da Requisição:
+  ```json
+  {
+    //ID Região de 1 à 5
+    "idRegiao": 1,
+    "nome": "Plusoft fake",
+    "cnpj": "8158165831",
+    "contato": "1515123131"
+  }
+#### Endpoint: Recuperar Empresa
+- Método: GET
+- Rota: /empresas/{id}
+- Descrição: Recupera empresa com o ID especifico.
+- Resposta da Requisição: /anallyzer/empresas/1
+  ```json
+  {
+    "id": 2,
+    "empresa": {
+        "idRegiao": 2,
+        "nome": "Plusoft fake",
+        "cnpj": "8158165831",
+        "contato": "1515123131"
+    },
+    "regiao": {
+        "id": 2,
+        "nome": "Sul",
+        "cidade": {
+            "id": 3,
+            "nome": "Houston"
+        },
+        "campanhas": [],
+        "empresas": [
+            {
+                "id": 1,
+                "nome": "Plusoft fake",
+                "cnpj": "8158165821",
+                "contato": "1515123131"
+            },
+            {
+                "id": 2,
+                "nome": "Plusoft fake",
+                "cnpj": "8158165831",
+                "contato": "1515123131"
+            }
+        ]
+     }
+  }
+### Entidade Cliente 
+#### Endpoint: Criar Cliente
+- Método: POST
+- Rota: /empresas
+- Descrição: Cria uma nova empresa.
+- Corpo da Requisição:
+  ```json
+  {
+    //ID Região de 1 à 5
+    "idRegiao": 1,
+    "nome": "Plusoft fake",
+    "cnpj": "8158165831",
+    "contato": "1515123131"
+  }
+#### Endpoint: Recuperar Empresa
+- Método: GET
+- Rota: /empresas/{id}
+- Descrição: Recupera empresa com o ID especifico.
+- Resposta da Requisição: /anallyzer/empresas/1
+  ```json
+  {
+    "id": 2,
+    "empresa": {
+        "idRegiao": 2,
+        "nome": "Plusoft fake",
+        "cnpj": "8158165831",
+        "contato": "1515123131"
+    },
+    "regiao": {
+        "id": 2,
+        "nome": "Sul",
+        "cidade": {
+            "id": 3,
+            "nome": "Houston"
+        },
+        "campanhas": [],
+        "empresas": [
+            {
+                "id": 1,
+                "nome": "Plusoft fake",
+                "cnpj": "8158165821",
+                "contato": "1515123131"
+            },
+            {
+                "id": 2,
+                "nome": "Plusoft fake",
+                "cnpj": "8158165831",
+                "contato": "1515123131"
+            }
+        ]
+     }
+  }
