@@ -123,52 +123,99 @@ $ git clone https://github.com/k-alm/Challenge-Java
 ### Entidade Cliente 
 #### Endpoint: Criar Cliente
 - Método: POST
-- Rota: /empresas
-- Descrição: Cria uma nova empresa.
+- Rota: /clientes
+- Descrição: Cria um novo cliente.
 - Corpo da Requisição:
   ```json
   {
-    //ID Região de 1 à 5
-    "idRegiao": 1,
-    "nome": "Plusoft fake",
-    "cnpj": "8158165831",
-    "contato": "1515123131"
-  }
-#### Endpoint: Recuperar Empresa
+    "nome": "Lucas marques do voce sabia",
+    "email": "lucas.marques@gmail.com",
+    "dtNascimento": "2002-02-02",
+      "idCampanha": 1,
+      // Ids genero: 1,2 [F/M]
+      "idGenero": 1,
+      "idEscolaridade": 7,
+      "idEstadoCivil": 1
+  }	
+#### Endpoint: Recuperar Cliente
 - Método: GET
-- Rota: /empresas/{id}
+- Rota: /clientes/{id}
 - Descrição: Recupera empresa com o ID especifico.
-- Resposta da Requisição: /anallyzer/empresas/1
+- Resposta da Requisição: /anallyzer/clientes/1
   ```json
   {
-    "id": 2,
+    "id": 1,
+    "nome": "Lucas Marques",
+    "email": "lucas.marques@gmail.com",
+    "dtNascimento": "2002-02-02",
+    "campanha": {
+        "id": 1,
+        "titulo": "Rogerio Ceni",
+        "descricao": "Campanha do Rogerio Ceni",
+        "dtCampanha": "2024-05-20",
+        "empresa": {
+            "id": 2,
+            "nome": "Plusoft fake",
+            "cnpj": "8158165831",
+            "contato": "1515123131"
+        }
+    }
+  }
+### Entidade Campanha
+#### Endpoint: Criar Campanha
+- Método: POST
+- Rota: /campanha
+- Descrição: Cria um novo campanha.
+- Corpo da Requisição:
+  ```json
+  {
+    "idEmpresa": 2,
+    // Ids regiao: 1 - 5
+    "idRegiao": 1,
+    "titulo": "Rogerio Ceni",
+    "descricao": "Campanha do Rogerio Ceni"
+  }		
+#### Endpoint: Recuperar Campanha
+- Método: GET
+- Rota: /camapanha/{id}
+- Descrição: Recupera campanha com o ID especifico.
+- Resposta da Requisição: /anallyzer/campanha/1
+  ```json
+  {
+    "id": 1,
+    "campanha": {
+        "idEmpresa": 2,
+        "idRegiao": 1,
+        "titulo": "Rogerio Ceni",
+        "descricao": "Campanha do Rogerio Ceni"
+    },
     "empresa": {
-        "idRegiao": 2,
+        "id": 2,
         "nome": "Plusoft fake",
         "cnpj": "8158165831",
         "contato": "1515123131"
     },
     "regiao": {
-        "id": 2,
-        "nome": "Sul",
+        "id": 1,
+        "nome": "Oeste",
         "cidade": {
-            "id": 3,
-            "nome": "Houston"
+            "id": 1,
+            "nome": "Los Angeles"
         },
-        "campanhas": [],
-        "empresas": [
+        "campanhas": [
             {
                 "id": 1,
-                "nome": "Plusoft fake",
-                "cnpj": "8158165821",
-                "contato": "1515123131"
-            },
-            {
-                "id": 2,
-                "nome": "Plusoft fake",
-                "cnpj": "8158165831",
-                "contato": "1515123131"
+                "titulo": "Rogerio Ceni",
+                "descricao": "Campanha do Rogerio Ceni",
+                "dtCampanha": "2024-05-20",
+                "empresa": {
+                    "id": 2,
+                    "nome": "Plusoft fake",
+                    "cnpj": "8158165831",
+                    "contato": "1515123131"
+                }
             }
-        ]
-     }
+        ],
+        "empresas": []
+    }
   }
